@@ -4,10 +4,11 @@ Vue.createApp({
             games:[],
             enteredGame:''
         }
-    }
+    },
     methods:{
         addGame(){
-            this.games.push(this.enteredGame)
+            this.games.push(this.enteredGame);
+            this.enteredGame = '';
         }
 
     }
