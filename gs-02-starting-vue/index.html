@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A game list-test app</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div>
+        <label for="game">Game list</label>
+        <input type="text" id="game" v-model="enteredGame" />
+        <button v-on:click="addGame">Add Game</button>
+      </div>
+      <ul>
+        <li v-for="game in games">{{ game }}</li>
+      </ul>
+    </div>
+    <script src="https://unpkg.com/vue@3.4.9/dist/vue.global.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
