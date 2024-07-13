@@ -7,16 +7,16 @@ const app = Vue.createApp({
     };
   },
   methods:{
-    addGame(){
+    addGame(num){
         this.playedgames.push(this.enteredGame),
-        this.counter = this.counter+ 1,
+        this.counter = this.counter+ num,
         this.enteredGame = '';
     
         
     },
-    removeGame(){
+    removeGame(num){
       this.playedgames.pop(),
-      this.counter = this.counter - 1;
+      this.counter = this.counter - num;
       
     }
   }

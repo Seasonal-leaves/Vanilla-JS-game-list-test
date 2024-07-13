@@ -19,13 +19,12 @@
     <section id="events">
       <h2>Games I have played</h2>
       <input type="text" id="game" v-model="enteredGame" />
-      <button v-on:click="addGame()">Add</button>
-      <button v-on:click="removeGame()">Remove</button>
+      <button v-on:click="addGame(16)">Add</button>
+      <button v-on:click="removeGame(16)">Remove</button>
       
-      <p>
-        <li v-for="game in playedgames">{{ game }}</li>
+      <p v-for="game in playedgames">{{ game }}
       </p>
-      <p>Result: Total games played {{ counter }}</p>
+      <p>Result: Total hours played {{ counter }}</p>
     </section>
   </body>
 </html>
