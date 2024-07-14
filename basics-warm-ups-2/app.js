@@ -4,6 +4,7 @@ const app = Vue.createApp({
       playedgames:[],
       enteredGame:'',
       counter: 0,
+      myname: '',
     };
   },
   methods:{
@@ -18,6 +19,9 @@ const app = Vue.createApp({
       this.playedgames.pop(),
       this.counter = this.counter - num;
       
+    },
+    setName(inputevent){
+      this.myname= inputevent.target.value;
     }
   }
 });

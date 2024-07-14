@@ -22,9 +22,13 @@
       <button v-on:click="addGame(16)">Add</button>
       <button v-on:click="removeGame(16)">Remove</button>
       
-      <p v-for="game in playedgames">{{ game }}
+      <p v-for="game in playedgames">{{ game }} 
       </p>
       <p>Result: Total hours played {{ counter }}</p>
+      <!-- When we add and event listener and then point to a funtion that should be executed when the event occurs. That function will automatically get one argument. The browser will make sure the argument is provided. That will be an object describing the event has occured. -->
+      <input type = "text" v-on:input="setName">
+      <!-- Notice in the above line we don't put parantheses after providing the method name. This suggests we are just pointing to the object and letting the browser choose what should be the argument -->
+       <p> Name is : {{myname}} </p>
     </section>
   </body>
 </html>
