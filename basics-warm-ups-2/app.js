@@ -20,8 +20,8 @@ const app = Vue.createApp({
       this.counter = this.counter - num;
       
     },
-    setName(inputevent){
-      this.myname= inputevent.target.value;
+    setName(inputevent, bestgame){
+      this.myname= inputevent.target.value + ' '+ bestgame;
     }
   }
 });
